@@ -1,0 +1,83 @@
+use resumeProject;
+CREATE TABLE [dbo].[CandidateEducationList]( 
+[ID] [int] IDENTITY(1,1) NOT NULL,
+[CandidateID] [varchar](30) NOT NULL,
+[Education_Type_Code] [varchar](50) NULL,
+[Education_Type_Name] [varchar](150) NULL,
+[Education_Program] [varchar](150) NULL,
+[Education_Institution] [varchar](150) NULL,
+[Education_StartDate] [date] NULL,
+[Education_EndDate] [date] NULL,
+[Education_Status] [varchar](50) NULL,
+[Created_Date] [smalldatetime] NULL,
+[Last_Updated_Date] [smalldatetime] NULL
+) ON [PRIMARY]
+
+
+CREATE TABLE [dbo].[CandidateExperienceList](
+[ID] [int] IDENTITY(1,1) NOT NULL,
+[CandidateID] [varchar](30) NOT NULL,
+[Experience_employer] [varchar](150) NULL,
+[Experience_Country] [varchar](150) NULL,
+[Expereince_Designation] [varchar](150) NULL,
+[Expereince_StartDate] [date] NULL,
+[Expereince_EndDate] [date] NULL,
+[Created_Date] [smalldatetime] NULL,
+[Last_Updated_Date] [smalldatetime] NULL
+) ON [PRIMARY]
+
+
+
+
+CREATE TABLE [dbo].[CandidateProfile](
+[ID] [int] IDENTITY(1,1) NOT NULL,
+[CandidateID] [varchar](30) NOT NULL,
+[Candidate_Creation_Date] [datetime] NULL,
+[First_Name] [varchar](150) NULL,
+[Last_Name] [varchar](150) NULL,
+[Email] [varchar](150) NULL,
+[Mobile_Phone] [varchar](150) NULL,
+[PAN_Number] [varchar](20) NULL,
+[TitleCode] [int] NULL,
+[TitleDescription] [varchar](500) NULL,
+[Duplicate] [varchar](50) NULL,
+[Notice_period_code] [int] NULL,
+[Notice_Period] [varchar](50) NULL,
+[Education_Type_Value] [varchar](50) NULL,
+[Submission_Resume] [bit] NULL,
+[CV_Data] [varchar](500) NULL,
+[Current_Address] [varchar](500) NULL,
+[City] [varchar](150) NULL,
+[State] [varchar](150) NULL,
+[Country] [varchar](150) NULL,
+[ZipCode] [varchar](20) NULL,
+[TOTAL_EXPERIENCE_FROM] [float] NULL,
+[TOTAL_EXPERIENCE_TO] [float] NULL,
+[Attachment_FileName] [varchar](500) NULL,
+[Attachment_Type] [varchar](100) NULL,
+[Attachment_FileContent] [varchar](max) NULL,
+[IsSetbyTAPortal] [bit] NULL,
+[Created_Date] [datetime] NULL,
+[Last_Updated_Date] [datetime] NULL,
+[Attachment_LUD] [datetime] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+
+
+CREATE TABLE [dbo].[CandidateSkillList](
+[ID] [int] IDENTITY(1,1) NOT NULL,
+[CandidateID] [varchar](30) NOT NULL,
+[Skill_Code] [varchar](20) NULL,
+[Skill_Name] [varchar](150) NULL,
+[Skill_Experience] [varchar](150) NULL,
+[Skill_Interest] [varchar](50) NULL,
+[Skill_LastUsed] [varchar](150) NULL,
+[skill_Proficiency] [varchar](50) NULL,
+[Created_Date] [smalldatetime] NULL,
+[Last_Updated_Date] [smalldatetime] NULL,
+[ai_Appended_Skills] [varchar](max) NULL,
+[ai_Last_Update_time] [smalldatetime] NULL
+) ON [PRIMARY]
+
+
+
